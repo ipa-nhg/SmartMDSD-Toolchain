@@ -17,31 +17,26 @@
 		<tycho.disableP2Mirrors>true</tycho.disableP2Mirrors>
 	</properties>
 	<modules>
-		<module>../../org.ecore.metamodels/org.ecore.service/org.ecore.service.communicationPattern</module>
-		<module>../../org.ecore.metamodels/org.ecore.service/org.ecore.service.communicationObject</module>
-		<module>../../org.ecore.metamodels/org.ecore.service/org.ecore.service.parameterDefinition</module>
-		<module>../../org.ecore.metamodels/org.ecore.service/org.ecore.service.coordinationPattern</module>
-		<module>../../org.ecore.metamodels/org.ecore.service/org.ecore.service.componentMode</module>
-		<module>../../org.ecore.metamodels/org.ecore.service/org.ecore.service.serviceDefinition</module>
-		<module>../../org.ecore.metamodels/org.ecore.base/org.ecore.base.stateMachine</module>
-		<module>../../org.ecore.metamodels/org.ecore.base/org.ecore.base.basicAttributes</module>
-		<module>../../org.ecore.metamodels/org.ecore.component/org.ecore.component.componentDefinition</module>
-		<module>../../org.ecore.metamodels/org.ecore.base/org.ecore.base.mixedport</module>
-		<module>../../org.ecore.metamodels/org.ecore.base/org.ecore.base.mixedport.edit</module>
-		<module>../../org.xtend.generators/org.xtend.smartsoft.generator</module>
+		<module>../org.smartsoft.utils</module>
+		<module>../org.smartmdsd.utils</module>
+		<module>../org.v2.to.v3.converter</module>
+		<module>../org.smartmdsd.navigator</module>
+		<module>../org.project.creation.wizards</module>	
+		<module>../../org.ecore.metamodels/org.ecore.metamodels.parent</module>
+		<module>../../org.xtext.grammars/org.xtext.grammars.parent</module>
+		<module>../../org.xtend.generators/org.xtend.generators.parent</module>
+		<module>../../org.sirius.designs/org.sirius.designs.parent</module>
+		<module>../org.smartmdsd.branding</module>
+		<module>../org.smartmdsd.feature</module>
+		<module>../org.smartmdsd.update.site</module>
 	</modules>
-
+	
 	<repositories>
 		<repository>
 			<id>eclipse</id>
 			<layout>p2</layout>
-			<url>https://download.eclipse.org/releases/2019-03/</url>
-		</repository>
-		<repository>
-			<id>Xtext Update Site</id>
-			<layout>p2</layout>
-			<url>https://download.eclipse.org/modeling/tmf/xtext/updates/releases/${xtextVersion}/</url>
-		</repository>
+			<url>https://download.eclipse.org/releases/2018-12/</url>
+		</repository>	
 		<repository>
 			<id>codehaus-snapshots</id>
 			<name>disable dead 'Codehaus Snapshots' repository, see
@@ -85,10 +80,7 @@
 					<executions>
 						<execution>
 							<goals>
-								<goal>compile</goal>
-								<goal>xtend-install-debug-info</goal>
-								<goal>testCompile</goal>
-								<goal>xtend-test-install-debug-info</goal>
+								<goal>compile</goal>								
 							</goals>
 						</execution>
 					</executions>
@@ -96,29 +88,25 @@
 						<outputDirectory>xtend-gen</outputDirectory>
 					</configuration>
 				</plugin>
-
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-clean-plugin</artifactId>
 					<version>2.5</version>
-					<executions>
-						<execution>
-							<id>xtend-gen-clean</id>
-							<goals>
-								<goal>clean</goal>
-							</goals>
-							<configuration>
-								<filesets>
-									<fileset>
-										<directory>${basedir}/xtend-gen</directory>
-										<includes>
-											<include>**/*</include>
-										</includes>
-									</fileset>
-								</filesets>
-							</configuration>
-						</execution>
-					</executions>
+					<configuration>
+						<filesets>
+							<fileset>
+								<directory>${project.basedir}/xtend-gen</directory>
+								<includes>
+									<include>**/*</include>
+								</includes>
+							</fileset>
+						</filesets>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-compiler-plugin</artifactId>
+					<version>${tycho-version}</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -129,18 +117,13 @@
 				<artifactId>tycho-maven-plugin</artifactId>
 				<version>${tycho-version}</version>
 				<extensions>true</extensions>
-			</plugin>
+			</plugin>	
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
 					<environments>
-						<environment>
-							<os>macosx</os>
-							<ws>cocoa</ws>
-							<arch>x86_64</arch>
-						</environment>
 						<environment>
 							<os>win32</os>
 							<ws>win32</ws>
@@ -161,16 +144,6 @@
 				<configuration>
 					<failIfNoTests>false</failIfNoTests>
 					<useUIHarness>false</useUIHarness>
-				</configuration>
-			</plugin>
-			<plugin>
-				<!-- Can be removed after first generator execution https://bugs.eclipse.org/bugs/show_bug.cgi?id=480097 -->
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-compiler-plugin</artifactId>
-				<version>${tycho-version}</version>
-				<configuration>
-					<compilerArgument>-err:-forbidden</compilerArgument>
-					<useProjectSettings>false</useProjectSettings>
 				</configuration>
 			</plugin>
 		</plugins>

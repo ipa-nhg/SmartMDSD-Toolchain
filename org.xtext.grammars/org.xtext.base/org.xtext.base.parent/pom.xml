@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>SmartMDSD-Toolchain</groupId>
+		<artifactId>org.xtext.grammars.parent</artifactId>
+		<version>3.9.0-SNAPSHOT</version>
+		<relativePath>../../org.xtext.grammars.parent</relativePath>
+	</parent>
+	
+	<artifactId>org.xtext.base.parent</artifactId>
+	<packaging>pom</packaging>	
+
+	<modules>
+		<module>../org.xtext.base.utils</module>
+		
+		<module>../basicAttributes/org.xtext.base.basicAttributes</module>
+		<module>../basicAttributes/org.xtext.base.basicAttributes.ide</module>
+		<module>../basicAttributes/org.xtext.base.basicAttributes.ui</module>
+		<module>../basicAttributes/org.xtext.base.basicAttributes.tests</module>
+		<!--  <module>../basicAttributes/org.xtext.base.basicAttributes.ui.tests</module> -->
+		
+		<module>../genericDatasheet/org.xtext.base.genericDatasheet</module>
+		<module>../genericDatasheet/org.xtext.base.genericDatasheet.ide</module>
+		<module>../genericDatasheet/org.xtext.base.genericDatasheet.ui</module>
+		<!-- <module>../genericDatasheet/org.xtext.base.genericDatasheet.tests</module> -->
+		<!-- <module>../genericDatasheet/org.xtext.base.genericDatasheet.ui.tests</module> -->
+		
+		<module>../stateMachine/org.xtext.base.stateMachine</module>
+		<module>../stateMachine/org.xtext.base.stateMachine.ide</module>
+		<module>../stateMachine/org.xtext.base.stateMachine.ui</module>
+		<module>../stateMachine/org.xtext.base.stateMachine.tests</module>
+		<!-- <module>../stateMachine/org.xtext.base.stateMachine.ui.tests</module> --> 
+		
+	</modules>
+</project>

@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>SmartMDSD-Toolchain</groupId>
+		<artifactId>org.xtext.grammars.parent</artifactId>
+		<version>3.9.0-SNAPSHOT</version>
+		<relativePath>../../org.xtext.grammars.parent</relativePath>
+	</parent>
+	
+	<artifactId>org.xtext.service.parent</artifactId>
+	<packaging>pom</packaging>	
+
+	<modules>
+		
+		<module>../communicationObject/org.xtext.service.communicationObject</module>
+		<module>../communicationObject/org.xtext.service.communicationObject.ide</module>
+		<module>../communicationObject/org.xtext.service.communicationObject.ui</module>
+		<module>../communicationObject/org.xtext.service.communicationObject.tests</module>
+		<!--  <module>../communicationObject/org.xtext.service.communicationObject.ui.tests</module> -->
+		
+		<module>../componentMode/org.xtext.service.componentMode</module>
+		<module>../componentMode/org.xtext.service.componentMode.ide</module>
+		<module>../componentMode/org.xtext.service.componentMode.ui</module>
+		<module>../componentMode/org.xtext.service.componentMode.tests</module>
+		<!-- <module>../componentMode/org.xtext.service.componentMode.ui.tests</module> -->
+		
+		<module>../parameterDefinition/org.xtext.service.parameterDefinition</module>
+		<module>../parameterDefinition/org.xtext.service.parameterDefinition.ide</module>
+		<module>../parameterDefinition/org.xtext.service.parameterDefinition.ui</module>
+		<module>../parameterDefinition/org.xtext.service.parameterDefinition.tests</module>
+		<!-- <module>../parameterDefinition/org.xtext.service.parameterDefinition.ui.tests</module> --> 
+		
+		<module>../domainModelsDatasheet/org.xtext.service.domainModelsDatasheet</module>
+		<module>../domainModelsDatasheet/org.xtext.service.domainModelsDatasheet.ide</module>
+		<module>../domainModelsDatasheet/org.xtext.service.domainModelsDatasheet.ui</module>
+		<!--  <module>../domainModelsDatasheet/org.xtext.service.domainModelsDatasheet.tests</module> -->
+		<!--  <module>../domainModelsDatasheet/org.xtext.service.domainModelsDatasheet.ui.tests</module> -->
+		
+		<module>../roboticMiddleware/org.xtext.service.roboticMiddleware</module>
+		<module>../roboticMiddleware/org.xtext.service.roboticMiddleware.ide</module>
+		<module>../roboticMiddleware/org.xtext.service.roboticMiddleware.ui</module> 
+		<!-- <module>../roboticMiddleware/org.xtext.service.roboticMiddleware.tests</module> -->
+		<!-- <module>../roboticMiddleware/org.xtext.service.roboticMiddleware.ui.tests</module> --> 
+	
+		<module>../serviceDefinition/org.xtext.service.serviceDefinition</module>
+		<module>../serviceDefinition/org.xtext.service.serviceDefinition.ide</module>
+		<module>../serviceDefinition/org.xtext.service.serviceDefinition.ui</module> 
+		<module>../serviceDefinition/org.xtext.service.serviceDefinition.tests</module>
+		<!-- <module>../serviceDefinition/org.xtext.service.serviceDefinition.ui.tests</module> --> 
+	
+		<module>../skillDefinition/org.xtext.service.skillDefinition</module>
+		<module>../skillDefinition/org.xtext.service.skillDefinition.ide</module>
+		<module>../skillDefinition/org.xtext.service.skillDefinition.ui</module> 
+		<!-- <module>../skillDefinition/org.xtext.service.skillDefinition.tests</module> -->
+		<!-- <module>../skillDefinition/org.xtext.service.skillDefinition.ui.tests</module> --> 
+	
+	</modules>
+</project>

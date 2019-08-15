@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>SmartMDSD-Toolchain</groupId>
+		<artifactId>org.xtext.grammars.parent</artifactId>
+		<version>3.9.0-SNAPSHOT</version>
+		<relativePath>../../org.xtext.grammars.parent</relativePath>
+	</parent>
+	
+	<artifactId>org.xtext.component.parent</artifactId>
+	<packaging>pom</packaging>	
+
+	<modules>
+		
+		<module>../componentDefinition/org.xtext.component.componentDefinition</module>
+		<module>../componentDefinition/org.xtext.component.componentDefinition.ide</module>
+		<module>../componentDefinition/org.xtext.component.componentDefinition.ui</module>
+		<module>../componentDefinition/org.xtext.component.componentDefinition.tests</module>
+		<!-- <module>../componentDefinition/org.xtext.component.componentDefinition.ui.tests</module> -->
+		
+		<module>../componentDatasheet/org.xtext.component.componentDatasheet</module>
+		<module>../componentDatasheet/org.xtext.component.componentDatasheet.ide</module>
+		<module>../componentDatasheet/org.xtext.component.componentDatasheet.ui</module>
+		<!-- <module>../componentDatasheet/org.xtext.component.componentDatasheet.tests</module> -->
+		<!-- <module>../componentDatasheet/org.xtext.component.componentDatasheet.ui.tests</module> -->
+		
+		<module>../componentDocumentation/org.xtext.component.componentDocumentation</module>
+		<module>../componentDocumentation/org.xtext.component.componentDocumentation.ide</module>
+		<module>../componentDocumentation/org.xtext.component.componentDocumentation.ui</module>
+		<!-- <module>../componentDocumentation/org.xtext.component.componentDocumentation.tests</module> -->
+		<!-- <module>../componentDocumentation/org.xtext.component.componentDocumentation.ui.tests</module> -->
+		
+		<module>../componentParameter/org.xtext.component.componentParameter</module>
+		<module>../componentParameter/org.xtext.component.componentParameter.ide</module>
+		<module>../componentParameter/org.xtext.component.componentParameter.ui</module>
+		<module>../componentParameter/org.xtext.component.componentParameter.tests</module>
+		<!-- <module>../componentParameter/org.xtext.component.componentParameter.ui.tests</module> -->
+	</modules>
+</project>

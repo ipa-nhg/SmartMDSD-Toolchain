@@ -4,3 +4,4 @@
 *._trace
 bin/
 xtend-gen/
+target/

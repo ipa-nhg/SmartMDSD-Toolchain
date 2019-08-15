@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>SmartMDSD-Toolchain</groupId>
+		<artifactId>org.xtext.grammars.parent</artifactId>
+		<version>3.9.0-SNAPSHOT</version>
+		<relativePath>../../org.xtext.grammars.parent</relativePath>
+	</parent>
+	
+	<artifactId>org.xtext.behavior.parent</artifactId>
+	<packaging>pom</packaging>
+	
+	<modules>
+		<module>../org.xtext.behavior.skillRealization/org.xtext.behavior.skillRealization</module>
+		<module>../org.xtext.behavior.skillRealization/org.xtext.behavior.skillRealization.ide</module>
+		<module>../org.xtext.behavior.skillRealization/org.xtext.behavior.skillRealization.ui</module>
+		<!-- <module>../org.xtext.behavior.skillRealization/org.xtext.behavior.skillRealization.tests</module> -->
+		<!-- <module>../org.xtext.behavior.skillRealization/org.xtext.behavior.skillRealization.ui.tests</module> -->
+		
+		<module>../org.xtext.behavior.taskDefinition/org.xtext.behavior.taskDefinition</module>
+		<module>../org.xtext.behavior.taskDefinition/org.xtext.behavior.taskDefinition.ide</module>
+		<module>../org.xtext.behavior.taskDefinition/org.xtext.behavior.taskDefinition.ui</module>
+		<!-- <module>../org.xtext.behavior.taskDefinition/org.xtext.behavior.taskDefinition.tests</module> -->
+		<!-- <module>../org.xtext.behavior.taskDefinition/org.xtext.behavior.taskDefinition.ui.tests</module> -->
+		
+		<module>../org.xtext.behavior.taskRealization/org.xtext.behavior.taskRealization</module>
+		<module>../org.xtext.behavior.taskRealization/org.xtext.behavior.taskRealization.ide</module>
+		<module>../org.xtext.behavior.taskRealization/org.xtext.behavior.taskRealization.ui</module>
+		<!-- <module>../org.xtext.behavior.taskRealization/org.xtext.behavior.taskRealization.tests</module> -->
+		<!-- <module>../org.xtext.behavior.taskRealization/org.xtext.behavior.taskRealization.ui.tests</module> -->
+	
+	</modules>
+</project>

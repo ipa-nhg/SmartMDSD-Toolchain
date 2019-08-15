@@ -1,0 +1,34 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>SmartMDSD-Toolchain</groupId>
+		<artifactId>org.smartmdsd.parent</artifactId>
+		<version>1.1.0-SNAPSHOT</version>
+		<relativePath>../../org.smartmdsd.infrastructure/org.smartmdsd.parent</relativePath>
+	</parent>
+		
+	<artifactId>org.xtend.generators.parent</artifactId>
+	<version>3.9.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	
+	<modules>
+		<module>../org.open62541.xml.compiler</module>
+		<module>../org.xtend.smartsoft.generator</module>
+		<module>../org.xtend.component.datasheet.generator</module>
+		<module>../org.xtend.coordinationInterface.generator</module>
+		<module>../org.xtend.domainModels.datasheet.generator</module>
+		<module>../org.xtend.plainOPCUA.generator</module>
+		<module>../org.xtend.system.datasheet.generator</module>
+	</modules>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.xtend</groupId>
+				<artifactId>xtend-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

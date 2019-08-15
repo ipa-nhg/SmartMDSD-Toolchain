@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>SmartMDSD-Toolchain</groupId>
+		<artifactId>org.ecore.metamodels.parent</artifactId>
+		<version>3.9.0-SNAPSHOT</version>
+		<relativePath>../../org.ecore.metamodels.parent</relativePath>
+	</parent>
+	<artifactId>org.ecore.behavior.parent</artifactId>
+	<packaging>pom</packaging>
+	
+	<modules>
+		<module>../org.ecore.behavior.skillRealization</module>
+		<module>../org.ecore.behavior.skillRealization.edit</module>
+		<module>../org.ecore.behavior.taskDefinition</module>
+		<module>../org.ecore.behavior.taskDefinition.edit</module>
+		<module>../org.ecore.behavior.taskRealization</module>
+		<module>../org.ecore.behavior.taskRealization.edit</module>	
+	</modules>
+
+</project>
